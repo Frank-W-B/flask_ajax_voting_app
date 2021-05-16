@@ -10,13 +10,14 @@ def index():
 @app.route("/up", methods=["POST"])
 def upvote():
     global votes
-    votes += 1
+    votes = votes + 1
     return str(votes)
 
 @app.route("/down", methods=["POST"])
-def upvote():
+def downvote():
     global votes
-    votes -= 1 if votes >= 1 else 0
+    if votes >= 1:
+        votes = votes - 1    
     return str(votes)
 
 
