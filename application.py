@@ -7,6 +7,18 @@ votes = 0
 def index():
     return render_template("index.html", votes=votes)
 
+@app.route("/up", methods=["POST"])
+def upvote():
+    global votes
+    votes += 1
+    return str(votes)
+
+@app.route("/down", methods=["POST"])
+def upvote():
+    global votes
+    votes -= 1 if votes >= 1 else 0
+    return str(votes)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
