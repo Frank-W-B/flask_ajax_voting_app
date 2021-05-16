@@ -5,7 +5,7 @@ votes = 0
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", votes=votes)
 
 
 if __name__ == '__main__':
