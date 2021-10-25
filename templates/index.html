@@ -15,21 +15,10 @@
         <br>
         <button onclick="downFunction()" id="down">DOWN</button>
         <br><br>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
-        <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
-        <script src="http://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.1.min.js"></script>
-        <script type="text/javascript"></script>
-
-
         <div id="plot-content">
             {{div_bok|safe}}
             {{scr_bok|safe}}
         </div>
-    
         <script>
         function upFunction(){
             $.ajax({
@@ -41,7 +30,6 @@
             });
         }
         </script>
-
         <script>
         function downFunction(){
             $.ajax({
